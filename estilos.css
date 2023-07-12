@@ -1,0 +1,38 @@
+header {
+    background-color: lightgrey;
+    width: 100%;
+    height: 100%;
+    padding: 20px 10px 10px 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+header p {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+footer {
+    background-color: lightgray;
+    margin-top: 50px;
+    padding: 30px 30px 10px 30px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: space-between;
+}
+
+.foot_ul {
+    list-style: none;
+    font-weight: bolder;
+}
+
+.foot_li {
+    font-weight: normal;
+}
+
+.foot_li:hover {
+    font-weight: normal;
+    color: gray;
+    transition: all 0.2s linear 0s;
+}

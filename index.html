@@ -10,29 +10,33 @@
 </head>
 <body>
     <!--Navegación-->
-    <nav class="navbar navbar-light bg-light">
-          <span class="navbar-brand mb-0 h1">App de Librería</span>
-    </nav>
+    <header>
+        <p>Preparatoria Álvaro Obregón: Lista de Alumnos</p>
+    </header>
 
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-5">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Agregar nuevo libro</h2>
+                        <h3>Registrar alumno</h3>
                     </div>
                     <div class="card-body">
                         <form>
                             <div class="form-group">
-                                <input type="text" id="titulo" class="form-control my-3" placeholder="Ingresar título">
+                                <input type="text" id="nombre" class="form-control my-3" placeholder="Nombre">
                             </div>
                             <div class="form-group">
-                                <textarea id="descripcion" class="form-control my-3" placeholder="Ingresar descripción"></textarea>
+                                <input type="text" id="apellido" class="form-control my-3" placeholder="Apellido">
                             </div>
                             <div class="form-group">
-                                <input type="number" id="precio" class="form-control my-3" placeholder="Ingresar precio">
+                                <input type="email" id="email" class="form-control my-3" placeholder="Correo electrónico"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Agregar</button>
+                            <div class="form-group">
+                                <input type="text" id="grado" class="form-control my-3" placeholder="Grado">
+                            </div>
+                            <button type="submit" class="btn btn-success">Agregar</button>
+                            <button type="reset" class="btn btn-danger">Limpiar</button>
                         </form>
 
                     </div>
@@ -42,22 +46,34 @@
                 <table class="table caption-top bg-light">
                     <thead>
                       <tr>
-                        <th scope="col">Título</th>
-                        <th scope="col">Descripción</th>
-                        <th scope="col">Precio</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Grado</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Yo soy Robot</td>
-                        <td>Libro de Sci-Fi</td>
-                        <td>200.00</td>
                       </tr>
                     </tbody>
                   </table>
             </div>
         </div>
     </div>
+
+    <footer>
+        <ul class="foot_ul">
+            PRINCIPAL
+            <li class="foot_li">Inicio</li>
+            <li class="foot_li">Calificaciones</li>
+        </ul>
+        <ul class="foot_ul">
+            SOPORTE
+            <li class="foot_li">Centro de ayuda</li>
+            <li class="foot_li">Herraminetas administrativas</li>
+        </ul>
+        <p>Made by ESAA. All rights reserved.</p>
+    </footer>
 
 
 
