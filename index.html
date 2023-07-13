@@ -14,7 +14,7 @@
         <p>Preparatoria Álvaro Obregón: Lista de Alumnos</p>
     </header>
 
-    <div class="container mt-4">
+    <div class="container mt-4" id="body">
         <div class="row">
             <div class="col-md-5">
                 <div class="card">
@@ -22,18 +22,18 @@
                         <h3>Registrar alumno</h3>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form id="formulario">
                             <div class="form-group">
                                 <input type="text" id="nombre" class="form-control my-3" placeholder="Nombre">
                             </div>
                             <div class="form-group">
-                                <input type="text" id="apellido" class="form-control my-3" placeholder="Apellido">
+                                <input type="email" id="correo" class="form-control my-3" placeholder="Correo electrónico">
                             </div>
                             <div class="form-group">
-                                <input type="email" id="email" class="form-control my-3" placeholder="Correo electrónico"></textarea>
+                                <input type="text" id="grado" class="form-control my-3" placeholder="Grado"></textarea>
                             </div>
                             <div class="form-group">
-                                <input type="text" id="grado" class="form-control my-3" placeholder="Grado">
+                                <input type="number" id="calificacion" class="form-control my-3" placeholder="Calificación">
                             </div>
                             <button type="submit" class="btn btn-success">Agregar</button>
                             <button type="reset" class="btn btn-danger">Limpiar</button>
@@ -47,16 +47,16 @@
                     <thead>
                       <tr>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Apellido</th>
-                        <th scope="col">Email</th>
+                        <th scope="col">Correo electrónico</th>
                         <th scope="col">Grado</th>
+                        <th scope="col">Calificación</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                      </tr>
+                    <tbody id="tbody">
+                        <tr>
+                        </tr>
                     </tbody>
-                  </table>
+                </table>
             </div>
         </div>
     </div>
