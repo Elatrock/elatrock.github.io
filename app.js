@@ -8,6 +8,16 @@ function crear(e) {
     grado = document.getElementById('grado').value;
     calificacion = document.getElementById('calificacion').value;
 
+    const verify = verificar(nombre, correo, grado, calificacion)
+
+    console.log(verify)
+
+    if (verify === false) {
+        console.log('Registro incompleto, no guardado');
+        e.preventDefault();
+        return
+    }
+
     let alumno = {
         nombre,
         correo,
@@ -104,11 +114,27 @@ function editar(nombre) {
 // Función Actualizar
 function actualizar(i) {
     let alumnos = JSON.parse(localStorage.getItem('alumnos'));
+    
+    nombre = document.getElementById('newnombre').value;
+    correo = document.getElementById('newcorreo').value;
+    grado = document.getElementById('newgrado').value;
+    calificacion = document.getElementById('newcalificacion').value;
 
-    alumnos[i].nombre = document.getElementById('newnombre').value;
-    alumnos[i].correo = document.getElementById('newcorreo').value;
-    alumnos[i].grado = document.getElementById('newgrado').value;
-    alumnos[i].calificacion = document.getElementById('newcalificacion').value;
+    if (nombre != '') {
+        alumnos[i].nombre = document.getElementById('newnombre').value;
+    }
+    
+    if (correo != '') {
+        alumnos[i].correo = document.getElementById('newcorreo').value;
+    }
+    
+    if (grado != '') {
+        alumnos[i].grado = document.getElementById('newgrado').value;
+    }
+
+    if (calificacion != '') {
+        alumnos[i].calificacion = document.getElementById('newcalificacion').value;
+    }
 
     localStorage.setItem('alumnos', JSON.stringify(alumnos));
     console.log('Registro actualizado');
@@ -182,6 +208,30 @@ function vistaPrincipal() {
 
     console.log('Registro no actualizado')
     leer();
+}
+
+function verificar(nombre, correo, grado, calificacion) {
+    if (nombre === '') {
+        alert('Campo obligatorio NOMBRE vacío.');
+        return false;
+    }
+
+    if (correo === '') {
+        alert('Campo obligatorio CORREO vacío.');
+        return false;
+    }
+    
+    if (grado === '') {
+        alert('Campo obligatorio GRADO vacío.');
+        return false;
+    }
+
+    if (calificacion === '') {
+        alert('Campo obligatorio CALIFICACION vacío.');
+        return false;
+    }
+
+    return true;
 }
 
 leer();
