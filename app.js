@@ -64,7 +64,7 @@ function leer() {
                 <td>${grado}</td>
                 <td>${calificacion}</td>
                 <td><button onclick="eliminar('${nombre}')" class="btn btn-danger">Eliminar</button></td>
-                <td><button onclick="editar('${nombre}')" class="btn btn-success">Editar</button></td>
+                <td><button onclick="editar('${nombre}')" class="btn btn-primary">Editar</button></td>
             <tr>
             `
         }
@@ -101,8 +101,8 @@ function editar(nombre) {
                                     <input type="number" id="newcalificacion" class="form-control my-3" placeholder="${alumnos[i].calificacion}">
                                 </div>
                             </form>
-                            <button type="submit" class="btn btn-success" onclick="actualizar('${i}')">Actualizar</button>
-                            <button type="submit" class="btn btn-primary" onclick="vistaPrincipal()">Cancelar</button>
+                            <button type="submit" class="btn btn-primary" onclick="actualizar('${i}')">Actualizar</button>
+                            <button type="submit" class="btn btn-secondary" onclick="vistaPrincipal()">Cancelar</button>
 
                         </div>
                     </div>
@@ -180,8 +180,8 @@ function vistaPrincipal() {
                         <div class="form-group">
                             <input type="number" id="calificacion" class="form-control my-3" placeholder="Calificación">
                         </div>
-                        <button type="submit" class="btn btn-success">Agregar</button>
-                        <button type="reset" class="btn btn-danger">Limpiar</button>
+                        <button type="submit" class="btn btn-primary">Agregar</button>
+                        <button type="reset" class="btn btn-secondary">Limpiar</button>
                     </form>
 
                 </div>
